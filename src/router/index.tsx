@@ -8,7 +8,7 @@ const router: RouteObject[] = [
   {
     path: "/",
     index: true,
-    element: <Navigate to={'/login'} />,
+    element: <Navigate to={"/login"} />, // <Navigate /> 组件被渲染时，就会跳转到 to 的路径页面
     // loader: () => {
     //   redirect('/login')
     // }

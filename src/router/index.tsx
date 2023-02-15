@@ -26,7 +26,6 @@ const Skeleton = lazy(() => import("@/views/helper/skeleton/Skeleton"))
 const router: RouteObject[] = [
   {
     path: "/",
-    index: true,
     element: <Navigate to={"/login"} />, // <Navigate /> 组件被渲染时，就会跳转到 to 的路径页面
   },
   {
@@ -38,107 +37,128 @@ const router: RouteObject[] = [
     element: <Layout />,
     children: [
       // 首页
-      {
-        path: "/admin",
-        element: <Navigate to={"/admin/home"} />, // 重定向
-      },
+      // {
+      //   path: "/admin",
+      //   element: <Navigate to={"home"} />, // 重定向
+      // },
       {
         path: "home",
         element: <Home />,
         index: true,
+        id: '1'
       },
       // 用户
       {
         path: "user",
+        id: '2',
         children: [
           {
             path: "/admin/user",
-            element: <Navigate to={"/admin/user/all_list"} />,
+            element: <Navigate to={"all_list"} />,
+            id: '3'
           },
           {
             path: "all_list",
             element: <AllList />,
             index: true,
+            id: '4'
           },
         ],
       },
       // 权限
       {
         path: "authority",
+        id: '5',
         children: [
           {
             path: "/admin/authority",
-            element: <Navigate to={"/admin/authority/role"} />,
+            element: <Navigate to={"role"} />,
+            id: '6'
           },
           {
             path: "role",
             element: <Role />,
             index: true,
+            id: '7'
           },
           {
             path: "permission",
             element: <Permission />,
+            id: '8'
           },
         ],
       },
       // 新闻
       {
         path: "news",
+        id: '9',
         children: [
           {
             path: "/admin/news",
-            element: <Navigate to={"/admin/news/edit"} />,
+            element: <Navigate to={"edit"} />,
+            id: '10'
           },
           {
             path: "edit",
             element: <Edit />,
             index: true,
+            id: '11'
           },
           {
             path: "draft",
             element: <Draft />,
+            id: '12'
           },
           {
             path: "classify",
             element: <Classify />,
+            id: '13'
           },
         ],
       },
       // 审核
       {
         path: "check",
+        id: '14',
         children: [
           {
             path: "/admin/check",
-            element: <Navigate to={"/admin/check/news"} />,
+            element: <Navigate to={"news"} />,
+            id: '15'
           },
           {
             path: "news",
             element: <CheckNews />,
             index: true,
+            id: '16'
           },
           {
             path: "list",
             element: <CheckList />,
+            id: '17'
           },
         ],
       },
       // 发布
       {
         path: "publish",
+        id: '18',
         children: [
           {
             path: "/admin/publish",
-            element: <Navigate to={"/admin/publish/await"} />,
+            element: <Navigate to={"await"} />,
+            id: '19'
           },
           {
             path: "await",
             element: <PublishAwait />,
             index: true,
+            id: '20'
           },
           {
             path: "done",
             element: <PublishDone />,
+            id: '21'
           },
         ],
       },

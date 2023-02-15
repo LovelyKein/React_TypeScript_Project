@@ -1,0 +1,36 @@
+.topHeader {
+  width: 100%;
+  height: max-content;
+  .header {
+    height: 72px;
+    .header_content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      .logo {
+        width: 200px;
+        height: 100%;
+      }
+      .title {
+        margin-left: 20px;
+        height: 100%;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        p {
+          color: #ffffff;
+          font-size: 24px;
+          letter-spacing: 2px;
+          line-height: 1em;
+          margin: 0;
+          font-weight: bold;
+          user-select: none;
+        }
+      }
+    }
+  }
+}

@@ -14,11 +14,11 @@ import { Layout } from 'antd'
 export default function LayoutBox() {
   return (
     <div className='layoutBox'>
-      <Layout>
+      <Layout className='antLayout'>
         <TopHeader />
-        <Layout>
-          <SideBar />
-          <Layout>
+        <Layout className='containerLayout'>
+          <SideBar width={260} />
+          <Layout className='contentLayout'>
             <CrumbsNav />
             <ContentBox />
           </Layout>

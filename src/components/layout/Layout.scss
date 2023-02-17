@@ -3,4 +3,14 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  .antLayout {
+    width: 100%;
+    height: 100%;
+    .containerLayout {
+      height: 100%;
+      .contentLayout {
+        height: 100%;
+      }
+    }
+  }
 }

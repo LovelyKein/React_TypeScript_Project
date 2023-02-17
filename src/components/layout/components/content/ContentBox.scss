@@ -1,0 +1,10 @@
+.contentBox {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  height: 100%;
+  .content_container {
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+  }
+}

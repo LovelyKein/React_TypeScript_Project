@@ -9,6 +9,7 @@ const routerNav = {
   'Layout': lazy(() => import("@/components/layout/Layout")),
   'Home': lazy(() => import("@/views/admin/home/Home")),
   'UserList': lazy(() => import("@/views/admin/user/user_list/UserList")),
+  'AddUser': lazy(() => import("@/views/admin/user/add_user/AddUser")),
   'Role': lazy(() => import("@/views/admin/authority/role/Role")),
   'Permission': lazy(() => import("@/views/admin/authority/permission/Permission")),
   'Edit': lazy(() => import("@/views/admin/news/edit/Edit")),

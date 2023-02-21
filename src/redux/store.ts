@@ -75,7 +75,7 @@ export const accountRouter: MenuAttribute[] = [
     },
     children: [
       {
-        path: "all_list",
+        path: "userlist",
         id: 31,
         parentId: 3,
         type: "layoutMenu",
@@ -86,6 +86,20 @@ export const accountRouter: MenuAttribute[] = [
           file: "/views/admin/user/user_list/UserList",
           icon: "",
           permissionType: "content",
+        },
+      },
+      {
+        path: "adduser",
+        id: 32,
+        parentId: 3,
+        type: "layoutMenu",
+        layoutComponent: "",
+        label: "添加用户",
+        component: {
+          name: "AddUser",
+          file: "/views/admin/user/add_user/AddUser",
+          icon: "",
+          permissionType: "button", // 按钮类型权限
         },
       },
     ],
@@ -305,4 +319,4 @@ export const accountRouter: MenuAttribute[] = [
       permissionType: "content",
     },
   },
-] 
+]; 

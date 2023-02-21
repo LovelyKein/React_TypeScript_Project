@@ -1,7 +1,14 @@
 .siderBar {
   .sider {
     height: 100%;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     box-sizing: border-box;
+    .ant-layout-sider-children {
+      height: 100%;
+      overflow-y: auto;
+      .sider_Menu {
+        font-weight: normal;
+      }
+    }
   }
 }

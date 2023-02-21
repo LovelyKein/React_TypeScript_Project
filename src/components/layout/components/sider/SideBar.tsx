@@ -46,12 +46,19 @@ export default function SideBar(props: Props) {
   const menuRoutes = accountRouter.filter((route) => route.type === "layout" && route.layoutComponent === 'Layout'); // 过滤出 菜单路由
   // 递归遍历出路由
   const menuItems: MenuProps["items"] = recursionRouter(menuRoutes); // 路由菜单
+
+  const menuClickHandler = (prams: { key: string; keyPath: string[] }) => {
+    console.log(prams);
+  };
   return (
     <div className="siderBar">
       <Sider
         width={props.width}
         style={{ background: colorBgContainer }}
         className="sider"
+        collapsible
+        collapsed={false}
+        trigger={null}
       >
         <Menu
           className="sider_Menu"
@@ -59,7 +66,8 @@ export default function SideBar(props: Props) {
           defaultSelectedKeys={[]}
           defaultOpenKeys={[]}
           style={{ borderRight: 0 }}
-          items={ menuItems }
+          items={menuItems}
+          onClick={menuClickHandler}
         />
       </Sider>
     </div>

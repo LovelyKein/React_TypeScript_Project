@@ -10,6 +10,7 @@ import 'antd/dist/reset.css' // antd 样式
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
+    {/* 用 路由模式 包裹所有的路由 */}
     <HashRouter>
       <App />
     </HashRouter>

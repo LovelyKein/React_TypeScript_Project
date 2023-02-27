@@ -8,7 +8,6 @@ export default defineConfig({
   server: {
     port: 8000,
     open: true,
-    // origin: 'loaclhost:8000',
     proxy: {
       "/proxyApi": {
         target: "http://jsonplaceholder.typicode.com",

@@ -4,7 +4,10 @@ import { RouteObject, Navigate } from "react-router-dom";
 import { accountRouter, MenuAttribute } from "@/redux/store";
 
 // 路由组件导航
-const routerNav = {
+interface RouterNav {
+  [key: string]: React.LazyExoticComponent<() => JSX.Element>
+}
+const routerNav: RouterNav = {
   'Login':  lazy(() => import('@/views/login/Login')),
   'Layout': lazy(() => import("@/components/layout/Layout")),
   'Home': lazy(() => import("@/views/admin/home/Home")),
@@ -43,15 +46,15 @@ const recursionRouter = (routes: MenuAttribute[]): RouteObject[] => {
         path: route.path,
         id: route.id.toString(),
         element: React.createElement(routerNav.Layout),
-        children: childrenRouter
+        children: childrenRouter,
       });
     } else {
       routeArr.push({
         path: route.path,
         id: route.id.toString(),
-        element: React.createElement(lazy(() => import(/* @vite-ignore */'..' + route.component.file + '.tsx'))),
-        // element: React.createElement(routerNav[route.component.name]),
-        children: childrenRouter
+        // element: React.createElement(lazy(() => import(/* @vite-ignore */'..' + route.component.file + '.tsx'))),
+        element: React.createElement(routerNav[route.component.name]),
+        children: childrenRouter,
       });
     }
   })
